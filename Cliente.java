@@ -1,6 +1,6 @@
 
-
 /**
+ * @author Yumurdzhan Yalmaz
  *  Representa a un cliente que hace un pedido 
  */
 public class Cliente
@@ -52,15 +52,18 @@ public class Cliente
      * representación textual del cliente
      */
     public String toString() {
-         
-          
+        String lineaFormateada = String.format("%10s%-10s\n","Nombre:", this.nombre);
+        lineaFormateada += String.format("%10s%-10s\n","Dirección:", this.direccion);
+        lineaFormateada += String.format("%10s%-10s\n","Ciudad:", this.ciudad);
+        lineaFormateada += String.format("%10s%-10s","Provincia:", this.provincia);
+        return lineaFormateada;
     }
-    
+
     /**
      * 
      */
     public void print() {
-        System.out.println(this.toString());
+        System.out.println(toString());
     }
 
 }
